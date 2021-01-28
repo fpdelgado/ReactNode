@@ -1,1 +1,24 @@
+Tutorial
 https://bezkoder.com/react-node-express-mysql/
+
+
+NODE
+
+Rotas
+https://bezkoder.com/node-js-express-sequelize-mysql/
+
+Paginação em node
+https://bezkoder.com/node-js-sequelize-pagination-mysql/
+
+
+REACT
+
+criacao das paginas para fazer CRUD
+https://bezkoder.com/react-crud-web-api/
+
+paginacao em react
+https://bezkoder.com/react-pagination-material-ui/
+
+
+rodar esse comando em casa para instalar o react:
+npm install -g create-react-app
