@@ -1,5 +1,13 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import TutorialsList from './components/tutorials-list.component'
+import AddTutorial from './components/add-tutorial.component'
+import Tutorial from './components/tutorial.component'
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 class App extends Component {
   render() {
@@ -7,7 +15,7 @@ class App extends Component {
         <div>
           <nav className="navbar navbar-expand navbar-dark bg-dark">
             <a href="/tutorials" className="navbar-brand">
-              bezKoder
+              FehDark
             </a>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">

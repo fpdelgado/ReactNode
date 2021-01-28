@@ -58,3 +58,7 @@
     max-width: 300px;
     margin: auto;
   }
+
+  .list-group-item:hover {
+      cursor: pointer;
+  }

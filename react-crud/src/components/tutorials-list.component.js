@@ -125,6 +125,7 @@ export default class TutorialsList extends Component {
                 >
                   {tutorial.title}
                 </li>
+
               ))}
           </ul>
 
