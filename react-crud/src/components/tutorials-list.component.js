@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default class TutorialsList extends Component {
   constructor(props) {
@@ -53,6 +53,11 @@ export default class TutorialsList extends Component {
     });
   }
 
+handleOnDoubleClick(){
+    
+    history.push("/tutorials/" + this.state.currentTutorial.id);
+}
+
   setActiveTutorial(tutorial, index) {
     this.setState({
       currentTutorial: tutorial,
@@ -83,6 +88,8 @@ export default class TutorialsList extends Component {
         console.log(e);
       });
   }
+
+ 
 
   render() {
     const { searchTitle, tutorials, currentTutorial, currentIndex } = this.state;
@@ -122,6 +129,8 @@ export default class TutorialsList extends Component {
                   }
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
+                  onMouseOver={() => this.setActiveTutorial(tutorial, index)}
+                  onDoubleClick={handleOnDoubleClick()}
                 >
                   {tutorial.title}
                 </li>
