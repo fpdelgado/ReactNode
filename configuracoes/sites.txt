@@ -22,3 +22,9 @@ https://bezkoder.com/react-pagination-material-ui/
 
 rodar esse comando em casa para instalar o react:
 npm install -g create-react-app
+
+
+
+RODAR REACT COM NODE JUNTOS
+
+https://medium.com/code-prestige/como-criar-um-app-react-consumindo-um-back-end-node-com-express-5030e1727ace
