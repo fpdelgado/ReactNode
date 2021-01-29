@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
-import { Link, useHistory } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+
+
+
+
 
 export default class TutorialsList extends Component {
   constructor(props) {
@@ -53,11 +57,6 @@ export default class TutorialsList extends Component {
     });
   }
 
-handleOnDoubleClick(){
-    
-    history.push("/tutorials/" + this.state.currentTutorial.id);
-}
-
   setActiveTutorial(tutorial, index) {
     this.setState({
       currentTutorial: tutorial,
@@ -89,10 +88,16 @@ handleOnDoubleClick(){
       });
   }
 
- 
+  ProtectedComponent = () => {
+    //if (authFails){
+        return <Redirect to='/login'  />
+    //}
+    //return <div> My Protected Component </div>;
+  }  
 
   render() {
     const { searchTitle, tutorials, currentTutorial, currentIndex } = this.state;
+
 
     return (
       <div className="list row">
@@ -130,7 +135,7 @@ handleOnDoubleClick(){
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                   onMouseOver={() => this.setActiveTutorial(tutorial, index)}
-                  onDoubleClick={handleOnDoubleClick()}
+                  onDoubleClick={() => this.props.history.push("/tutorials/" + currentTutorial.id)}
                 >
                   {tutorial.title}
                 </li>

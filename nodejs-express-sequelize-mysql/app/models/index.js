@@ -20,5 +20,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
+db.filmes = require("./filme.model.js")(sequelize, Sequelize);
+db.generos = require("./genero.model.js")(sequelize, Sequelize);
 
 module.exports = db;
