@@ -44,6 +44,7 @@ exports.findAll = (req, res) => {
     //Genero.belongsTo(Filme, {foreignKey: 'descricao'})
 
     Filme.findAll({
+        raw: true,
         attributes: [
             'idFilme', 
             ['titulo', 'tituloFilme'],
