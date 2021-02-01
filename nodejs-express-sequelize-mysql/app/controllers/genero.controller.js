@@ -1,5 +1,5 @@
 const db = require("../models");
-const Genero = db.generos;
+const Genero = db.genero;
 //const Op = db.Sequelize.Op;
 
 

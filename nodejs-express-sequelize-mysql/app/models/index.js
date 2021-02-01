@@ -5,6 +5,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
   operatorsAliases: false,
+  freezeTableName: true,
 
   pool: {
     max: dbConfig.pool.max,
@@ -20,7 +21,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
-db.filmes = require("./filme.model.js")(sequelize, Sequelize);
-db.generos = require("./genero.model.js")(sequelize, Sequelize);
+db.genero = require("./genero.model.js")(sequelize, Sequelize);
+db.filme = require("./filme.model.js")(sequelize, Sequelize);
 
 module.exports = db;

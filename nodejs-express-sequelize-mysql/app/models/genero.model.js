@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
     const Genero = sequelize.define("genero", {
-      idGereno: {
+    idGenero: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
@@ -8,7 +8,7 @@ module.exports = (sequelize, Sequelize) => {
       descricao: {
           type: Sequelize.STRING
       }
-    });
+    }, { freezeTableName: true });
   
     return Genero;
   };
