@@ -28,3 +28,7 @@ npm install -g create-react-app
 RODAR REACT COM NODE JUNTOS
 
 https://medium.com/code-prestige/como-criar-um-app-react-consumindo-um-back-end-node-com-express-5030e1727ace
+
+
+
+https://medium.com/@diomalta/como-organizar-e-estruturar-projetos-com-node-js-4845be004899
