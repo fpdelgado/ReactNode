@@ -15,6 +15,7 @@ export default class TutorialsList extends Component {
     this.setActiveTutorial = this.setActiveTutorial.bind(this);
     this.removeAllTutorials = this.removeAllTutorials.bind(this);
     this.searchTitle = this.searchTitle.bind(this);
+    this.keyPress = this.keyPress.bind(this);
 
     this.state = {
       tutorials: [],
@@ -88,6 +89,12 @@ export default class TutorialsList extends Component {
       });
   }
 
+  keyPress(e){
+    if(e.key === 'Enter'){
+      this.searchTitle();
+    }
+  }
+
   ProtectedComponent = () => {
     //if (authFails){
         return <Redirect to='/login'  />
@@ -108,6 +115,7 @@ export default class TutorialsList extends Component {
               className="form-control"
               placeholder="Search by title"
               value={searchTitle}
+              onKeyUp={this.keyPress}
               onChange={this.onChangeSearchTitle}
             />
             <div className="input-group-append">

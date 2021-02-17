@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import { Switch } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { Link, Switch, Route } from 'react-router-dom';
 import TutorialsList from './components/tutorials-list.component'
 import AddTutorial from './components/add-tutorial.component'
 import Tutorial from './components/tutorial.component'
